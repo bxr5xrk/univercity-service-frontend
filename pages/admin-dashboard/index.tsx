@@ -1,20 +1,23 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 import ModalCreate from "../../components/modalCreate";
 
-const generateList = (title: string) => {
-    return (
-        <section className="homeItem">
-            <h1>{title}</h1>
-            <div className="homeList">
-                <button>Add {title.toLowerCase()}</button>
-                <button>Edit {title.toLowerCase()}</button>
-                <button>Remove {title.toLowerCase()}</button>
-            </div>
-        </section>
-    );
-};
-
 const AdminDashboard: FC = () => {
+    const [showModal, setShowModal] = useState(false);
+    const generateList = (title: string) => {
+        return (
+            <section className="homeItem">
+                <h1>{title}</h1>
+                <div className="homeList">
+                    <button onClick={() => setShowModal(true)}>
+                        Add {title.toLowerCase()}
+                    </button>
+                    <button>Edit {title.toLowerCase()}</button>
+                    <button>Remove {title.toLowerCase()}</button>
+                </div>
+            </section>
+        );
+    };
+
     return (
         <div className="flex-row m-3">
             {generateList("Group")}
@@ -22,7 +25,12 @@ const AdminDashboard: FC = () => {
             {generateList("Lecturer")}
             {generateList("Subject")}
 
-            <ModalCreate />
+            {showModal && (
+                <ModalCreate
+                    showModal={showModal}
+                    setShowModal={setShowModal}
+                />
+            )}
         </div>
     );
 };

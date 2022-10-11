@@ -1,7 +1,8 @@
-import { gql, useQuery } from "@apollo/client";
+import { gql, useMutation, useQuery } from "@apollo/client";
 import { useRouter } from "next/router";
 import BackLink from "../../components/BackLink";
 import ListWithLinks from "../../components/ListWithLinks";
+import RemoveGroup from "../../components/remove/removeGroup";
 import { GET_GROUP } from "../../queries/query";
 import { IGroup, ILecturer, IStudent } from "../../types";
 
@@ -29,6 +30,7 @@ const GroupPage = () => {
             {group && (
                 <>
                     <BackLink />
+                    <RemoveGroup id={group.id} />
                     <h1 className="text-3xl text-teal-800 pb-2 border-b-2 border-black">
                         {group.title}
                     </h1>

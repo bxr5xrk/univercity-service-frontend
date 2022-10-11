@@ -2,7 +2,12 @@ import { useMutation } from "@apollo/client";
 import React, { FC, useState } from "react";
 import { CREATE_GROUP } from "../../queries/mutations";
 
-const ModalCreate: FC = () => {
+interface ModalCreateProps {
+    showModal: boolean;
+    setShowModal: (i: boolean) => void;
+}
+
+const ModalCreate: FC<ModalCreateProps> = ({ showModal, setShowModal }) => {
     const [title, setTitle] = useState("");
 
     const [CreateGroup, { data, loading, error }] = useMutation(CREATE_GROUP, {
@@ -19,8 +24,13 @@ const ModalCreate: FC = () => {
     // console.log(data);
 
     return (
-        <div>
+        <>
+            <div
+                onClick={() => setShowModal(false)}
+                className="fixed top-0 left-0 bg-black opacity-30 right-0 bottom-0 w-full h-full"
+            ></div>
             <form
+                className="absolute top-1/4 left-1/4 right-1/4 w-100px flex justify-center bg-white border-[1px] border-teal-800 rounded-2xl p-9"
                 onSubmit={(e) => {
                     e.preventDefault();
                     CreateGroup({
@@ -42,7 +52,7 @@ const ModalCreate: FC = () => {
                 />
                 <button type="submit">Submit</button>
             </form>
-        </div>
+        </>
     );
 };
 
