@@ -1,5 +1,6 @@
 import { useMutation } from "@apollo/client";
 import React, { FC, useState } from "react";
+import { GET_ALL } from "../../queries";
 import { CREATE_GROUP } from "../../queries/group";
 
 interface ModalCreateProps {
@@ -15,6 +16,7 @@ const ModalCreate: FC<ModalCreateProps> = ({ setShowModal }) => {
                 title,
             },
         },
+        refetchQueries: [{ query: GET_ALL }],
     });
 
     if (loading) return <p>Submitting...</p>;

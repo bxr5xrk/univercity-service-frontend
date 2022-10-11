@@ -1,6 +1,7 @@
 import { useMutation } from "@apollo/client";
 import { useRouter } from "next/router";
 import React, { FC } from "react";
+import { GET_ALL } from "../../queries";
 import { REMOVE_GROUP } from "../../queries/group";
 
 interface RemoveGroupProps {
@@ -13,6 +14,7 @@ const RemoveGroup: FC<RemoveGroupProps> = ({ id }) => {
         variables: {
             removeGroupId: id,
         },
+        refetchQueries: [{ query: GET_ALL }],
     });
 
     if (loading) return <p>Submitting...</p>;
