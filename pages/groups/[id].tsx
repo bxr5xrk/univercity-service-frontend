@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import BackLink from "../../components/BackLink";
 import ListWithLinks from "../../components/ListWithLinks";
 import RemoveGroup from "../../components/remove/removeGroup";
-import { GET_GROUP } from "../../queries/query";
+import { GET_GROUP } from "../../queries/group";
 import { IGroup, ILecturer, IStudent } from "../../types";
 
 interface GroupData extends IGroup {

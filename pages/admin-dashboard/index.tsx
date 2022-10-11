@@ -25,12 +25,7 @@ const AdminDashboard: FC = () => {
             {generateList("Lecturer")}
             {generateList("Subject")}
 
-            {showModal && (
-                <ModalCreate
-                    showModal={showModal}
-                    setShowModal={setShowModal}
-                />
-            )}
+            {showModal && <ModalCreate setShowModal={setShowModal} />}
         </div>
     );
 };

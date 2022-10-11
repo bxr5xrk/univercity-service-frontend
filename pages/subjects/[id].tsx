@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import React from "react";
 import BackLink from "../../components/BackLink";
 import ListWithLinks from "../../components/ListWithLinks";
-import { GET_SUBJECT } from "../../queries/query";
+import { GET_SUBJECT } from "../../queries/subject";
 import { ILecturer, ISubject } from "../../types";
 
 interface SubjectData extends ISubject {

@@ -1,13 +1,12 @@
 import { useMutation } from "@apollo/client";
 import React, { FC, useState } from "react";
-import { CREATE_GROUP } from "../../queries/mutations";
+import { CREATE_GROUP } from "../../queries/group";
 
 interface ModalCreateProps {
-    showModal: boolean;
     setShowModal: (i: boolean) => void;
 }
 
-const ModalCreate: FC<ModalCreateProps> = ({ showModal, setShowModal }) => {
+const ModalCreate: FC<ModalCreateProps> = ({ setShowModal }) => {
     const [title, setTitle] = useState("");
 
     const [CreateGroup, { data, loading, error }] = useMutation(CREATE_GROUP, {
@@ -20,8 +19,6 @@ const ModalCreate: FC<ModalCreateProps> = ({ showModal, setShowModal }) => {
 
     if (loading) return <p>Submitting...</p>;
     if (error) return <p>{`Submission error! ${error.message}`}</p>;
-
-    // console.log(data);
 
     return (
         <>
@@ -40,6 +37,7 @@ const ModalCreate: FC<ModalCreateProps> = ({ showModal, setShowModal }) => {
                             },
                         },
                     });
+                    setShowModal(false);
                 }}
             >
                 <input

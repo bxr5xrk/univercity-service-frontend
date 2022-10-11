@@ -1,6 +1,6 @@
 import { useQuery } from "@apollo/client";
 import HomeItem from "../components/HomeItem";
-import { GET_ALL } from "../queries/query";
+import { GET_ALL } from "../queries";
 import { IGetAll } from "../types";
 
 const Home = () => {
