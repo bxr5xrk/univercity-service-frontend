@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import React from "react";
 import BackLink from "../../components/BackLink";
 import ListWithLinks from "../../components/ListWithLinks";
-import { GET_STUDENT } from "../../queries";
+import { GET_STUDENT } from "../../queries/query";
 import { IGroup, IStudent } from "../../types";
 
 interface StudentData extends IStudent {

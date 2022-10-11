@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import React, { FC } from "react";
 import BackLink from "../../components/BackLink";
 import ListWithLinks from "../../components/ListWithLinks";
-import { GET_LECTURER } from "../../queries";
+import { GET_LECTURER } from "../../queries/query";
 import { IGroup, ILecturer, ISubject } from "../../types";
 
 interface LecturerData extends ILecturer {

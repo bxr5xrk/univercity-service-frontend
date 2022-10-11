@@ -2,7 +2,7 @@ import { gql, useQuery } from "@apollo/client";
 import { useRouter } from "next/router";
 import BackLink from "../../components/BackLink";
 import ListWithLinks from "../../components/ListWithLinks";
-import { GET_GROUP } from "../../queries";
+import { GET_GROUP } from "../../queries/query";
 import { IGroup, ILecturer, IStudent } from "../../types";
 
 interface GroupData extends IGroup {
