@@ -1,6 +1,6 @@
 import { useQuery } from "@apollo/client";
 import React from "react";
-import { GET_ALL } from "../../queries";
+import { GET_ALL } from "../../queries/query";
 
 const Home = () => {
     const { loading, error, data } = useQuery(GET_ALL);
@@ -11,8 +11,7 @@ const Home = () => {
 
     console.log(data);
 
-    return <main>
-    </main>;
+    return <main></main>;
 };
 
 export default Home;
