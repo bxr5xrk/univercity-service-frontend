@@ -20,3 +20,11 @@ export const REMOVE_SUBJECT = gql`
         }
     }
 `;
+
+export const CREATE_SUBJECT = gql`
+    mutation CreateSubject($createSubjectInput: CreateSubjectInput!) {
+        createSubject(createSubjectInput: $createSubjectInput) {
+            id
+        }
+    }
+`;

@@ -1,5 +1,5 @@
 import React, { FC, useState } from "react";
-import ModalCreate from "../../components/modalCreate";
+import ModalCreate from "../../components/createNewItem";
 
 const AdminDashboard: FC = () => {
     const [showModal, setShowModal] = useState(false);

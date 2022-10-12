@@ -20,3 +20,11 @@ export const REMOVE_STUDENT = gql`
         }
     }
 `;
+
+export const CREATE_STUDENT = gql`
+    mutation CreateStudent($createStudentInput: CreateStudentInput!) {
+        createStudent(createStudentInput: $createStudentInput) {
+            id
+        }
+    }
+`;

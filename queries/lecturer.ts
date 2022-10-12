@@ -24,3 +24,11 @@ export const REMOVE_LECTURER = gql`
         }
     }
 `;
+
+export const CREATE_LECTURER = gql`
+    mutation CreateLecturer($createLecturerInput: CreateLecturerInput!) {
+        createLecturer(createLecturerInput: $createLecturerInput) {
+            id
+        }
+    }
+`;
