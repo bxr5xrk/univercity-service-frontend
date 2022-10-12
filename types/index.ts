@@ -24,3 +24,5 @@ export interface IGetAll {
     students: IStudent[];
     subjects: ISubject[];
 }
+
+export type dataType = "group" | "lecturer" | "student" | "subject";

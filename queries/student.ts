@@ -12,3 +12,11 @@ export const GET_STUDENT = gql`
         }
     }
 `;
+
+export const REMOVE_STUDENT = gql`
+    mutation RemoveStudent($removeStudentId: Int!) {
+        removeStudent(id: $removeStudentId) {
+            id
+        }
+    }
+`;

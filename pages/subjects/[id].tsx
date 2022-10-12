@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import React from "react";
 import BackLink from "../../components/BackLink";
 import ListWithLinks from "../../components/ListWithLinks";
+import RemoveItem from "../../components/removeItem";
 import { GET_SUBJECT } from "../../queries/subject";
 import { ILecturer, ISubject } from "../../types";
 
@@ -32,6 +33,7 @@ const SubjectPage = () => {
             {subject && (
                 <>
                     <BackLink />
+                    <RemoveItem id={subject.id} type="subject" />
                     <h1 className="text-3xl text-teal-800 pb-2 border-b-2 border-black">
                         {subject.title}
                     </h1>

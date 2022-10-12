@@ -12,3 +12,11 @@ export const GET_SUBJECT = gql`
         }
     }
 `;
+
+export const REMOVE_SUBJECT = gql`
+    mutation RemoveSubject($removeSubjectId: Int!) {
+        removeSubject(id: $removeSubjectId) {
+            id
+        }
+    }
+`;

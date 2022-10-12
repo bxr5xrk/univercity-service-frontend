@@ -1,15 +1,17 @@
 import { useRouter } from "next/router";
 import React, { FC, useState } from "react";
+import { dataType } from "../../types";
 import { variablesForDeleting, DeleteItem } from "../../utils/deleteItem";
 import Snackbar from "../snackbar";
 
 interface RemoveItemProps {
     id: number;
+    type: dataType;
 }
 
-const RemoveItem: FC<RemoveItemProps> = ({ id }) => {
+const RemoveItem: FC<RemoveItemProps> = ({ id, type }) => {
     const router = useRouter();
-    const { data, loading, error, removeItem } = DeleteItem(id, "group");
+    const { data, loading, error, removeItem } = DeleteItem(id, type);
 
     const [showSnackbar, setShowSnackbar] = useState(false);
 
@@ -18,7 +20,7 @@ const RemoveItem: FC<RemoveItemProps> = ({ id }) => {
     if (error) console.error(error?.message);
 
     const handleDelete = () => {
-        removeItem({ variables: variablesForDeleting(id, "group") });
+        removeItem({ variables: variablesForDeleting(id, type) });
         setShowSnackbar(true);
         setTimeout(() => {
             setShowSnackbar(false);

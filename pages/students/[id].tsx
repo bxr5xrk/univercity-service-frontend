@@ -3,6 +3,7 @@ import { useRouter } from "next/router";
 import React from "react";
 import BackLink from "../../components/BackLink";
 import ListWithLinks from "../../components/ListWithLinks";
+import RemoveItem from "../../components/removeItem";
 import { GET_STUDENT } from "../../queries/student";
 import { IGroup, IStudent } from "../../types";
 
@@ -32,6 +33,7 @@ const StudentsPage = () => {
             {student && (
                 <>
                     <BackLink />
+                    <RemoveItem id={student.id} type="student" />
                     <h1 className="text-3xl text-teal-800 pb-2 border-b-2 border-black">
                         {student.fullName}
                     </h1>
