@@ -16,3 +16,11 @@ export const GET_LECTURER = gql`
         }
     }
 `;
+
+export const REMOVE_LECTURER = gql`
+    mutation RemoveLecturer($removeLecturerId: Int!) {
+        removeLecturer(id: $removeLecturerId) {
+            id
+        }
+    }
+`;

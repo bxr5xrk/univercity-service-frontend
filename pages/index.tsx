@@ -1,6 +1,5 @@
 import { useQuery } from "@apollo/client";
 import HomeItem from "../components/HomeItem";
-import Snackbar from "../components/snackbar";
 import { GET_ALL } from "../queries";
 import { IGetAll } from "../types";
 
@@ -65,7 +64,6 @@ const Home = () => {
                     </section>
                 </>
             )}
-            {/* <Snackbar type="success" /> */}
         </div>
     );
 };

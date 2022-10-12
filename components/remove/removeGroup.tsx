@@ -1,22 +1,16 @@
-import { useMutation } from "@apollo/client";
 import { useRouter } from "next/router";
 import React, { FC, useState } from "react";
-import { GET_ALL } from "../../queries";
-import { REMOVE_GROUP } from "../../queries/group";
+import { variablesForDeleting, DeleteItem } from "../../utils/deleteItem";
 import Snackbar from "../snackbar";
 
-interface RemoveGroupProps {
+interface RemoveItemProps {
     id: number;
 }
 
-const RemoveGroup: FC<RemoveGroupProps> = ({ id }) => {
+const RemoveItem: FC<RemoveItemProps> = ({ id }) => {
     const router = useRouter();
-    const [removeGroup, { data, loading, error }] = useMutation(REMOVE_GROUP, {
-        variables: {
-            removeGroupId: id,
-        },
-        refetchQueries: [{ query: GET_ALL }],
-    });
+    const { data, loading, error, removeItem } = DeleteItem(id, "group");
+
     const [showSnackbar, setShowSnackbar] = useState(false);
 
     if (loading) return <p>Submitting...</p>;
@@ -24,7 +18,7 @@ const RemoveGroup: FC<RemoveGroupProps> = ({ id }) => {
     if (error) console.error(error?.message);
 
     const handleDelete = () => {
-        removeGroup({ variables: { removeGroupId: id } });
+        removeItem({ variables: variablesForDeleting(id, "group") });
         setShowSnackbar(true);
         setTimeout(() => {
             setShowSnackbar(false);
@@ -58,4 +52,4 @@ const RemoveGroup: FC<RemoveGroupProps> = ({ id }) => {
     );
 };
 
-export default RemoveGroup;
+export default RemoveItem;
