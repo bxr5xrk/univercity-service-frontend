@@ -49,6 +49,7 @@ const ModalCreate: FC<ModalCreateProps> = ({ setShowModal }) => {
                     placeholder="enter title"
                     value={title}
                     onChange={(e) => setTitle(e.target.value)}
+                    autoFocus
                 />
                 <button type="submit">Submit</button>
             </form>
