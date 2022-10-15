@@ -25,8 +25,25 @@ const Home = () => {
             {data && (
                 <>
                     <section className="homeItem">
-                        <h1>Groups</h1>
-                        <button onClick={() => handleClick("group")}>+</button>
+                        <div className="top">
+                            <h1>Groups</h1>
+
+                            <svg
+                                onClick={() => handleClick("group")}
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                strokeWidth={1.5}
+                                stroke="currentColor"
+                                className="w-6 h-6 stroke-teal-800"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    d="M12 4.5v15m7.5-7.5h-15"
+                                />
+                            </svg>
+                        </div>
                         <div className="homeList">
                             {data.groups.map((i) => (
                                 <HomeItem
@@ -38,10 +55,25 @@ const Home = () => {
                         </div>
                     </section>
                     <section className="homeItem">
-                        <h1>Lecturers</h1>
-                        <button onClick={() => handleClick("lecturer")}>
-                            +
-                        </button>
+                        <div className="top">
+                            <h1>Lecturers</h1>
+
+                            <svg
+                                onClick={() => handleClick("lecturer")}
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                strokeWidth={1.5}
+                                stroke="currentColor"
+                                className="w-6 h-6 stroke-teal-800"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    d="M12 4.5v15m7.5-7.5h-15"
+                                />
+                            </svg>
+                        </div>
                         <div className="homeList">
                             {data.lecturers.map((i) => (
                                 <HomeItem
@@ -53,10 +85,25 @@ const Home = () => {
                         </div>
                     </section>
                     <section className="homeItem">
-                        <h1>Students</h1>
-                        <button onClick={() => handleClick("student")}>
-                            +
-                        </button>
+                        <div className="top">
+                            <h1>Students</h1>
+
+                            <svg
+                                onClick={() => handleClick("student")}
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                strokeWidth={1.5}
+                                stroke="currentColor"
+                                className="w-6 h-6 stroke-teal-800"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    d="M12 4.5v15m7.5-7.5h-15"
+                                />
+                            </svg>
+                        </div>
                         <div className="homeList">
                             {data.students.map((i) => (
                                 <HomeItem
@@ -68,10 +115,25 @@ const Home = () => {
                         </div>
                     </section>
                     <section className="homeItem">
-                        <h1>Subjects</h1>
-                        <button onClick={() => handleClick("subject")}>
-                            +
-                        </button>
+                        <div className="top">
+                            <h1>Subjects</h1>
+
+                            <svg
+                                onClick={() => handleClick("subject")}
+                                xmlns="http://www.w3.org/2000/svg"
+                                fill="none"
+                                viewBox="0 0 24 24"
+                                strokeWidth={1.5}
+                                stroke="currentColor"
+                                className="w-6 h-6 stroke-teal-800"
+                            >
+                                <path
+                                    strokeLinecap="round"
+                                    strokeLinejoin="round"
+                                    d="M12 4.5v15m7.5-7.5h-15"
+                                />
+                            </svg>
+                        </div>
                         <div className="homeList">
                             {data.subjects.map((i) => (
                                 <HomeItem

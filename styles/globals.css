@@ -8,7 +8,7 @@
         @apply min-h-[100vh] grid grid-rows-layout p-2 max-w-7xl my-0 mx-auto;
     }
     h1 {
-        @apply font-bold pl-1 mb-3;
+        @apply font-bold;
     }
     a {
         @apply text-orange-700;
@@ -16,13 +16,19 @@
     button {
         @apply rounded-2xl font-bold text-black border-[1px] border-teal-800 p-3 cursor-pointer hover:bg-teal-600 hover:text-white transition-all duration-300;
     }
+    svg {
+        @apply w-6 h-6 stroke-teal-800 cursor-pointer hover:scale-125 transition;
+    }
 }
 
 @layer components {
     .homeItem {
-        @apply flex-row border-[1px] border-teal-800 rounded-2xl p-3 my-2 hover:bg-teal-50 transition-all duration-300 ease-in;
+        @apply flex-row border-[1px] border-teal-800 rounded-2xl p-3 my-2 hover:bg-teal-50 transition-all duration-300 ease-in max-w-full;
     }
     .homeList {
-        @apply flex rounded-2xl gap-3;
+        @apply flex rounded-2xl gap-3 flex-wrap;
+    }
+    .top {
+        @apply flex justify-between items-center ml-2 mb-3;
     }
 }
