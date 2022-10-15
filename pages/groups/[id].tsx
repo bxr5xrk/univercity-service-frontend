@@ -1,6 +1,7 @@
 import { useQuery } from "@apollo/client";
 import { useRouter } from "next/router";
 import BackLink from "../../components/BackLink";
+import EditItem from "../../components/EditItem";
 import ListWithLinks from "../../components/ListWithLinks";
 import RemoveItem from "../../components/removeItem";
 import { GET_GROUP } from "../../queries/group";
@@ -19,6 +20,8 @@ const GroupPage = () => {
         variables: { groupId: Number(id) },
     });
 
+    console.log(1)
+
     if (loading) return "loading";
 
     if (error) return "error";
@@ -31,6 +34,7 @@ const GroupPage = () => {
                 <>
                     <BackLink />
                     <RemoveItem id={group.id} type="group" />
+                    <EditItem />
                     <h1 className="text-3xl text-teal-800 pb-2 border-b-2 border-black">
                         {group.title}
                     </h1>

@@ -50,7 +50,6 @@ export const CreateNewItem = (
     type: dataType,
     groupId: number
 ) => {
-    console.log(title, groupId);
     const QUERY_NAME = queryForCreation(type);
     const variables = variablesForCreating(title, type, groupId);
 

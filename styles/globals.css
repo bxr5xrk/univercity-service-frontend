@@ -14,10 +14,13 @@
         @apply text-orange-700;
     }
     button {
-        @apply rounded-2xl font-bold text-black border-[1px] border-teal-800 p-3 cursor-pointer hover:bg-teal-600 hover:text-white transition-all duration-300;
+        @apply rounded-2xl font-bold text-black border-[1px] border-teal-800 p-3 cursor-pointer hover:bg-teal-600 hover:text-white transition-all duration-300 w-fit;
     }
     svg {
         @apply w-6 h-6 stroke-teal-800 cursor-pointer hover:scale-125 transition;
+    }
+    input {
+        @apply px-6 py-3 border border-teal-800 rounded-2xl focus:bg-teal-50 w-fit;
     }
 }
 

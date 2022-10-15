@@ -64,9 +64,9 @@ select {
     all: unset;
 }
 
-input {
+/* input {
     all: unset;
-}
+} */
 
 menu {
     margin: 0;
