@@ -27,7 +27,6 @@ const Home = () => {
                     <section className="homeItem">
                         <div className="top">
                             <h1>Groups</h1>
-
                             <svg
                                 onClick={() => handleClick("group")}
                                 xmlns="http://www.w3.org/2000/svg"
@@ -57,7 +56,6 @@ const Home = () => {
                     <section className="homeItem">
                         <div className="top">
                             <h1>Lecturers</h1>
-
                             <svg
                                 onClick={() => handleClick("lecturer")}
                                 xmlns="http://www.w3.org/2000/svg"
@@ -87,7 +85,6 @@ const Home = () => {
                     <section className="homeItem">
                         <div className="top">
                             <h1>Students</h1>
-
                             <svg
                                 onClick={() => handleClick("student")}
                                 xmlns="http://www.w3.org/2000/svg"
@@ -117,7 +114,6 @@ const Home = () => {
                     <section className="homeItem">
                         <div className="top">
                             <h1>Subjects</h1>
-
                             <svg
                                 onClick={() => handleClick("subject")}
                                 xmlns="http://www.w3.org/2000/svg"

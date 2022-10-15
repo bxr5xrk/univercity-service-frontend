@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import React, { FC, useState } from "react";
+import React, { FC, memo, useState } from "react";
 import { dataType } from "../../types";
 import { variablesForDeleting, DeleteItem } from "../../utils/deleteItem";
 import Snackbar from "../snackbar";
@@ -54,4 +54,4 @@ const RemoveItem: FC<RemoveItemProps> = ({ id, type }) => {
     );
 };
 
-export default RemoveItem;
+export default memo(RemoveItem);

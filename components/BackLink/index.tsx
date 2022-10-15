@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Router from "next/router";
-import React from "react";
+import React, { memo } from "react";
 
 const BackLink = () => {
     const router = Router;
@@ -22,4 +22,4 @@ const BackLink = () => {
     );
 };
 
-export default BackLink;
+export default memo(BackLink);
