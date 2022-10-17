@@ -15,7 +15,7 @@ const RemoveItem: FC<RemoveItemProps> = ({ id, type }) => {
 
     const [showSnackbar, setShowSnackbar] = useState(false);
 
-    if (loading) return <p>Submitting...</p>;
+    if (loading) console.log("Submitting...");
 
     if (error) console.error(error?.message);
 
