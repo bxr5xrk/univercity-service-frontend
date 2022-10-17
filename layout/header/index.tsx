@@ -6,10 +6,6 @@ const headerItems = [
         link: "/",
         title: "HOME",
     },
-    {
-        link: "/admin-dashboard",
-        title: "ADMIN PANEL",
-    },
 ];
 
 const Header: FC = () => {
