@@ -1,8 +1,6 @@
 import { useQuery } from "@apollo/client";
-import Link from "next/link";
 import { useRouter } from "next/router";
 import { useState } from "react";
-import BackLink from "../../components/BackLink";
 import Breadcrumbs from "../../components/Breadcrumbs";
 import EditItem from "../../components/EditItem";
 import EditItemIcon from "../../components/EditItem/icon";

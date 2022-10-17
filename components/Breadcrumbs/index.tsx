@@ -15,7 +15,7 @@ const Breadcrumbs: FC<BreadcrumbsProps> = ({ linksArr }) => {
             </Link>
 
             {linksArr.map((i) => (
-                <>
+                <div key={i.title} className='flex gap-2'>
                     <span>/</span>
                     {i.href ? (
                         <Link href={i.href}>
@@ -24,7 +24,7 @@ const Breadcrumbs: FC<BreadcrumbsProps> = ({ linksArr }) => {
                     ) : (
                         <p className="font-bold text-teal-800">{i.title}</p>
                     )}
-                </>
+                </div>
             ))}
         </div>
     );
