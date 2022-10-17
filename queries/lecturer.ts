@@ -32,3 +32,12 @@ export const CREATE_LECTURER = gql`
         }
     }
 `;
+
+export const GET_LECTURERS = gql`
+    query Lecturers {
+        lecturers {
+            id
+            fullName
+        }
+    }
+`;

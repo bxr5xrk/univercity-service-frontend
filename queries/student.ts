@@ -28,3 +28,12 @@ export const CREATE_STUDENT = gql`
         }
     }
 `;
+
+export const GET_STUDENTS = gql`
+    query Students {
+        students {
+            id
+            fullName
+        }
+    }
+`;

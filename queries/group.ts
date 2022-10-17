@@ -32,3 +32,12 @@ export const GET_GROUP = gql`
         }
     }
 `;
+
+export const GET_GROUPS = gql`
+    query Groups {
+        groups {
+            id
+            title
+        }
+    }
+`;

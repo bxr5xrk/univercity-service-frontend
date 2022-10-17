@@ -28,3 +28,12 @@ export const CREATE_SUBJECT = gql`
         }
     }
 `;
+
+export const GET_SUBJECTS = gql`
+    query Subjects {
+        subjects {
+            id
+            title
+        }
+    }
+`;

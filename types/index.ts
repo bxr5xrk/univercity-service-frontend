@@ -25,4 +25,24 @@ export interface IGetAll {
     subjects: ISubject[];
 }
 
+export interface IGroup {
+    id: number;
+    title: string;
+}
+
+export interface IStudent {
+    id: number;
+    fullName: string;
+}
+
+export interface ISubject {
+    id: number;
+    title: string;
+}
+
+export interface ILecturer {
+    id: number;
+    fullName: string;
+}
+
 export type dataType = "group" | "lecturer" | "student" | "subject";
